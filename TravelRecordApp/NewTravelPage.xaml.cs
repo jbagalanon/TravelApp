@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SQLite;
+using TravelRecordApp.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,5 +18,29 @@ namespace TravelRecordApp
         {
             InitializeComponent();
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            //post is an object type
+            Post post = new Post()
+            {
+                Experience = experienceEntry.Text
+            }
+            ;
+            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+
+            //this is generic type - conn.CreateTable<Post>();
+            conn.CreateTable<Post>();
+            int rows = conn.Insert(post);
+
+            //close the connection the avoid the error (error establishing connection)
+            conn.Close();
+
+            if (rows > 0)
+                DisplayAlert("Success", "Experience Successfully Inserted", "Ok");
+            else
+                DisplayAlert("Insert Failed", " No data inserted", "Ok");
+        }
+
     }
 }

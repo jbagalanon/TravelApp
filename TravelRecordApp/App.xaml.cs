@@ -6,8 +6,8 @@ namespace TravelRecordApp
 {
     public partial class App : Application
     {
-        //initialize database
-        private static string DatabaseLocation = string.Empty; 
+        //initialize database - suposedly privae
+        public static string DatabaseLocation = string.Empty; 
         
         //initialize database through constractor.
         public App(string databaselocaton)
