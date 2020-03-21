@@ -27,19 +27,18 @@ namespace TravelRecordApp
                 Experience = experienceEntry.Text
             }
             ;
-            SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation);
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
 
-            //this is generic type - conn.CreateTable<Post>();
-            conn.CreateTable<Post>();
-            int rows = conn.Insert(post);
+                //this is generic type - conn.CreateTable<Post>();
+                conn.CreateTable<Post>();
+                int rows = conn.Insert(post);
 
-            //close the connection the avoid the error (error establishing connection)
-            conn.Close();
-
-            if (rows > 0)
-                DisplayAlert("Success", "Experience Successfully Inserted", "Ok");
-            else
-                DisplayAlert("Insert Failed", " No data inserted", "Ok");
+                if (rows > 0)
+                    DisplayAlert("Success", "Experience Successfully Inserted", "Ok");
+                else
+                    DisplayAlert("Insert Failed", " No data inserted", "Ok");
+            }
         }
 
     }

@@ -6,20 +6,8 @@ namespace TravelRecordApp
 {
     public partial class App : Application
     {
-        //initialize database - suposedly privae
-        public static string DatabaseLocation = string.Empty; 
-        
-        //initialize database through constractor.
-        public App(string databaselocaton)
-        {
-            InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage());
-
-            DatabaseLocation = databaselocaton;
-        }
-
-
+        //initialize database - suposedly private
+        public static string DatabaseLocation = string.Empty;
 
         //original app given by xamarin
         public App()
@@ -31,7 +19,19 @@ namespace TravelRecordApp
 
         }
 
+        //initialize database through constractor.
+        public App(string databaseLocation)
+        {
+            InitializeComponent();
 
+            MainPage = new NavigationPage(new MainPage());
+
+            DatabaseLocation = databaseLocation;
+        }
+
+
+
+  
 
         protected override void OnStart()
         {
