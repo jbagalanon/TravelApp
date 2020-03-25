@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.travelrecordapp" android:installLocation="internalOnly">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+         android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
-	<application android:label="TravelRecordApp.Android"></application>
+
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -10,6 +11,11 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
   <application android:label="TravelRecordApp.Android">
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCN1mORk8XLRxQGSQMNHhRC_Cl6_usQSAo"/>
+
+
+    <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDsmIdwGQyfbTDXDFwJSmOR0yPTlqEcoF4"/>
+
+
   </application>
 </manifest>

@@ -18,16 +18,17 @@ namespace TravelRecordApp.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            //I added this code to fix the error A geolocation error occured: Unauthorized Source
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
 
-            Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Xamarin.FormsMaps.Init(this,bundle);
-
-
+            
             //name of db file
             string dbName= "travel_db.sqlite";
 
@@ -45,5 +46,15 @@ namespace TravelRecordApp.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+        /*
+        public override void OnRequestPermissionsResult(int requestCode,
+    string[] permissions, Android.Content.PM.Permission[] grantResults)
+        {
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode,
+                permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions,
+                grantResults);
+        }
+        */
     }
 }

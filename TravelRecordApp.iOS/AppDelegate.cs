@@ -24,6 +24,9 @@ namespace TravelRecordApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.FormsMaps.Init();
+
+
             string dbName = "travel_db.sqlite";
 
             //folder path for IOS, the two dots allow to navigate the parent of the folder
