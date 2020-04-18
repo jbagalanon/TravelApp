@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using TravelRecordApp.Model;
 
 namespace TravelRecordApp.Logic
@@ -20,6 +21,10 @@ namespace TravelRecordApp.Logic
                 var response = await client.GetAsync(url);
 
                 var json = await response.Content.ReadAsStringAsync();
+
+                var venueRoot = JsonConvert.DeserializeObject<VenueRoot>(json);
+
+                venues = venueRoot.response.venues as List<Venue>;
             }
 
             return venues;
