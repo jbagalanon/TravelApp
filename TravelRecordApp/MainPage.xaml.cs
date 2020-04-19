@@ -19,7 +19,7 @@ namespace TravelRecordApp
 
             var assembly = typeof(MainPage);
 
-            iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.planeFinal.png", assembly);
+            iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.planeBoeing.png", assembly);
         }
 
 
