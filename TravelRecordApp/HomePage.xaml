@@ -9,6 +9,7 @@
 
     <TabbedPage.ToolbarItems>
         <ToolbarItem Text="Add"
+
                      Icon="add.png"
                       Clicked="ToolbarItem_Clicked"/>
     </TabbedPage.ToolbarItems>
