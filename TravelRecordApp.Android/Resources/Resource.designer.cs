@@ -11234,16 +11234,16 @@ namespace TravelRecordApp.Droid
 			public const int notify_panel_notification_icon_bg = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int person = 2131165324;
+			public const int save = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int save = 2131165325;
+			public const int tooltip_frame_dark = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int tooltip_frame_dark = 2131165326;
+			public const int tooltip_frame_light = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int tooltip_frame_light = 2131165327;
+			public const int user = 2131165327;
 			
 			static Drawable()
 			{
@@ -12253,10 +12253,10 @@ namespace TravelRecordApp.Droid
 			public const int map = 2131492869;
 			
 			// aapt resource value: 0x7F0C0006
-			public const int person = 2131492870;
+			public const int save = 2131492870;
 			
 			// aapt resource value: 0x7F0C0007
-			public const int save = 2131492871;
+			public const int user = 2131492871;
 			
 			static Mipmap()
 			{
