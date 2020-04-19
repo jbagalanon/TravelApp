@@ -11,6 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\plane.png" />
+    <None Remove="Assets\Images\planeBoeing.png" />
+    <None Remove="Assets\Images\planeFinal.png" />
+    <None Remove="Assets\plane.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\plane.png" />
+    <EmbeddedResource Include="Assets\Images\planeBoeing.png" />
+    <EmbeddedResource Include="Assets\Images\planeFinal.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Bcl" Version="1.1.10" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />

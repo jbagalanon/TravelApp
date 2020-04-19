@@ -16,6 +16,10 @@ namespace TravelRecordApp
         public MainPage()
         {
             InitializeComponent();
+
+            var assembly = typeof(MainPage);
+
+            iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.planeFinal.png", assembly);
         }
 
 
